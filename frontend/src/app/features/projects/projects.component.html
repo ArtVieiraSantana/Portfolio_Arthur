@@ -12,7 +12,7 @@
       @for (project of projects; track project.id) {
         <article class="project-card glass-card">
           <div class="project-cover">
-            <i [class]="project.icon"></i>
+            <img [src]="project.image" [alt]="'Capa do projeto ' + project.title" />
           </div>
 
           <div class="project-body">

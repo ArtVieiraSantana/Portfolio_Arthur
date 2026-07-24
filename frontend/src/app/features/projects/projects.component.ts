@@ -17,7 +17,7 @@ export class ProjectsComponent {
       description:
         'Sistema web para gerenciamento de acesso em condomínios e empresas, com cadastro de moradores, visitantes e prestadores de serviço, além do registro de entradas e saídas de forma segura e organizada(login: sindico senha: 654321).',
       tags: ['Java', 'Spring-boot','Angular'],
-      icon: 'fa-solid fa-laptop-code',
+      image: 'assets/Capa_Portaria_Digital.png',
       repoUrl: '#',
       liveUrl: 'https://portaria-digital.onrender.com/'
     },
@@ -27,7 +27,7 @@ export class ProjectsComponent {
       description:
         'Landing page desenvolvida para apresentar os produtos e serviços de uma papelaria, com design responsivo, navegação intuitiva e foco em destacar a identidade visual da marca e facilitar o contato com clientes.',
       tags: ['Responsive', 'HTML', 'CSS'],
-      icon: 'fa-solid fa-mobile-alt',
+      image: 'assets/Capa_Papelaria.png',
       repoUrl: 'https://github.com/ArtVieiraSantana/Papelaria_landing_page.git',
       liveUrl: '#'
     },
@@ -37,7 +37,7 @@ export class ProjectsComponent {
       description:
         'Um jogo RPG de texto em Java que contém áudio para suavizar a experiência do usuário. Projeto feito em grupo com foco em backend.',
       tags: ['Backend', 'Java'],
-      icon: 'fa-solid fa-database',
+      image: 'assets/Capa_Jogo_Java.png',
       repoUrl: 'https://github.com/stapani7/Grupo-3---Turma-A',
       liveUrl: '#'
     }
