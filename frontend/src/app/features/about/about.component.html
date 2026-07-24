@@ -1,0 +1,34 @@
+<section id="sobre" class="section about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Sobre Mim</span>
+      <h2 class="section-title">Um pouco da minha <span class="gradient">trajetória</span></h2>
+    </div>
+
+    <div class="about-content">
+      <div class="about-text">
+        <p>{{ bioParagrafo1 }}</p>
+        <p>{{ bioParagrafo2 }}</p>
+
+        <h3>Habilidades Principais</h3>
+        <div class="skills-grid">
+          @for (skill of skills; track skill.name) {
+            <div class="skill-chip glass-card">
+              <i [class]="skill.icon"></i>
+              <span>{{ skill.name }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="about-stats">
+        @for (stat of stats; track stat.label) {
+          <div class="stat glass-card">
+            <h3 class="gradient">{{ stat.value }}</h3>
+            <p>{{ stat.label }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

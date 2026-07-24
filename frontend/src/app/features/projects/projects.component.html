@@ -1,0 +1,41 @@
+<section id="projetos" class="section projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Portfólio</span>
+      <h2 class="section-title">Meus <span class="gradient">Projetos</span></h2>
+      <p class="section-subtitle">
+        Uma seleção dos projetos que desenvolvi ao longo da minha formação.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.id) {
+        <article class="project-card glass-card">
+          <div class="project-cover">
+            <i [class]="project.icon"></i>
+          </div>
+
+          <div class="project-body">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+
+            <div class="project-tags">
+              @for (tag of project.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <a [href]="project.repoUrl" target="_blank" rel="noopener" class="project-link" title="Repositório no GitHub">
+              <i class="fab fa-github"></i> Código
+            </a>
+            <a [href]="project.liveUrl" target="_blank" rel="noopener" class="project-link" title="Ver projeto publicado">
+              Ver Projeto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

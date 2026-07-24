@@ -1,0 +1,89 @@
+<section id="contato" class="section contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Contato</span>
+      <h2 class="section-title">Vamos <span class="gradient">Conversar?</span></h2>
+      <p class="section-subtitle">Estou sempre aberto a novas oportunidades e projetos interessantes.</p>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item glass-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p><a [href]="'mailto:' + email">{{ email }}</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item glass-card">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h3>Telefone</h3>
+            <p><a [href]="'tel:' + telefone">{{ telefone }}</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item glass-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h3>Localização</h3>
+            <p>{{ localizacao }}</p>
+          </div>
+        </div>
+
+        <div class="social-icons">
+          <a class="social-icon" [href]="github" target="_blank" rel="noopener" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="social-icon" [href]="linkedin" target="_blank" rel="noopener" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form glass-card" [formGroup]="form" (ngSubmit)="enviar()">
+        <div class="form-group">
+          <input type="text" placeholder="Seu Nome" formControlName="name" />
+          @if (f.name.invalid && f.name.touched) {
+            <span class="field-error">Informe seu nome (mínimo 2 caracteres).</span>
+          }
+        </div>
+
+        <div class="form-group">
+          <input type="email" placeholder="Seu Email" formControlName="email" />
+          @if (f.email.invalid && f.email.touched) {
+            <span class="field-error">Informe um e-mail válido.</span>
+          }
+        </div>
+
+        <div class="form-group">
+          <textarea placeholder="Sua Mensagem" rows="5" formControlName="message"></textarea>
+          @if (f.message.invalid && f.message.touched) {
+            <span class="field-error">Escreva uma mensagem com pelo menos 10 caracteres.</span>
+          }
+        </div>
+
+        <!-- Campo honeypot: invisível para humanos, usado para detectar bots -->
+        <div class="honeypot" aria-hidden="true">
+          <input type="text" formControlName="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="estado() === 'enviando'">
+          @if (estado() === 'enviando') {
+            Enviando...
+          } @else {
+            Enviar Mensagem
+          }
+        </button>
+
+        @if (estado() === 'sucesso') {
+          <p class="feedback success">{{ mensagemRetorno() }}</p>
+        }
+        @if (estado() === 'erro') {
+          <p class="feedback error">{{ mensagemRetorno() }}</p>
+        }
+      </form>
+    </div>
+  </div>
+</section>

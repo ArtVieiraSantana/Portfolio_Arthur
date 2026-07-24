@@ -1,0 +1,43 @@
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="section-tag">👋 Bem-vindo ao meu portfólio</span>
+      <h1>Olá, eu sou <span class="gradient">Arthur</span></h1>
+      <p class="subtitle">Estudante de Análise e Desenvolvimento de Sistemas</p>
+      <p class="description">
+        Curioso por natureza, estudo para transformar ideias em soluções reais através do código.
+        Aqui você encontra meus projetos, experiências e formas de entrar em contato comigo.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="#projetos" class="btn btn-primary">Ver Projetos <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contato" class="btn btn-outline">Entrar em Contato</a>
+      </div>
+
+      <div class="social-icons">
+        <a class="social-icon" [href]="github" target="_blank" rel="noopener" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="social-icon" [href]="linkedin" target="_blank" rel="noopener" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="social-icon" [href]="email" title="E-mail">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="glow-blob"></div>
+      <div class="avatar-frame">
+        <img src="assets/profile.jpg" alt="Foto de Arthur Vieira Santana" class="avatar" />
+      </div>
+
+      @for (badge of badges; track badge.icon) {
+        <div class="floating-badge" [style.top]="badge.top" [style.left]="badge.left">
+          <i [class]="badge.icon"></i>
+        </div>
+      }
+    </div>
+  </div>
+</section>
