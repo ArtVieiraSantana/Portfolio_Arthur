@@ -1,10 +1,10 @@
-<nav class="navbar" [class.scrolled]="scrolled()">
+<nav class="navbar" [class.scrolled]="scrolled()" [class.hidden]="escondida()">
   <div class="container navbar-inner">
     <a href="#home" class="brand">Arthur<span class="dot">.</span>dev</a>
 
     <ul class="nav-menu" [class.active]="menuAberto()">
       @for (link of links; track link.href) {
-        <li><a [href]="link.href" class="nav-link" (click)="fecharMenu()">{{ link.label }}</a></li>
+        <li><a [href]="link.href" class="nav-link" [class.active]="linkAtivo() === link.href" (click)="fecharMenu()">{{ link.label }}</a></li>
       }
     </ul>
 

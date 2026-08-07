@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../core/models/project.model';
+import { RevealDirective } from '../../shared/directives/reveal.directive';
+import { MagneticDirective } from '../../shared/directives/magnetic.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective, MagneticDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -29,7 +31,7 @@ export class ProjectsComponent {
       tags: ['Responsive', 'HTML', 'CSS'],
       image: 'assets/Capa_Papelaria.png',
       repoUrl: 'https://github.com/ArtVieiraSantana/Papelaria_landing_page.git',
-      liveUrl: '#'
+      liveUrl: 'https://artvieirasantana.github.io/Papelaria_landing_page/'
     },
     {
       id: 3,

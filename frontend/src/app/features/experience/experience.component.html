@@ -1,6 +1,6 @@
 <section id="experiencia" class="section experience">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appReveal>
       <span class="section-tag">Trajetória</span>
       <h2 class="section-title">Minha <span class="gradient">Experiência</span></h2>
       <p class="section-subtitle">
@@ -10,7 +10,7 @@
 
     <div class="timeline">
       @for (exp of experiences; track exp.id; let i = $index) {
-        <div class="timeline-item">
+        <div class="timeline-item" appReveal [appRevealDelay]="i * 140">
           <div class="timeline-marker">
             <span>{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
           </div>

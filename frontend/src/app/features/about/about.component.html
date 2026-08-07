@@ -1,19 +1,19 @@
 <section id="sobre" class="section about">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appReveal>
       <span class="section-tag">Sobre Mim</span>
       <h2 class="section-title">Um pouco da minha <span class="gradient">trajetória</span></h2>
     </div>
 
     <div class="about-content">
-      <div class="about-text">
+      <div class="about-text" appReveal [appRevealDelay]="80">
         <p>{{ bioParagrafo1 }}</p>
         <p>{{ bioParagrafo2 }}</p>
 
         <h3>Habilidades Principais</h3>
         <div class="skills-grid">
-          @for (skill of skills; track skill.name) {
-            <div class="skill-chip glass-card">
+          @for (skill of skills; track skill.name; let i = $index) {
+            <div class="skill-chip glass-card" appMagnetic [appMagneticStrength]="0.5" appReveal [appRevealDelay]="120 + i * 80">
               <i [class]="skill.icon"></i>
               <span>{{ skill.name }}</span>
             </div>
@@ -22,8 +22,8 @@
       </div>
 
       <div class="about-stats">
-        @for (stat of stats; track stat.label) {
-          <div class="stat glass-card">
+        @for (stat of stats; track stat.label; let i = $index) {
+          <div class="stat glass-card" appReveal [appRevealDelay]="160 + i * 100">
             <h3 class="gradient">{{ stat.value }}</h3>
             <p>{{ stat.label }}</p>
           </div>

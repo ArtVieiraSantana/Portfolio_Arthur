@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RevealDirective } from '../../shared/directives/reveal.directive';
+import { MagneticDirective } from '../../shared/directives/magnetic.directive';
 
 interface Skill {
   name: string;
@@ -14,7 +16,7 @@ interface Stat {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective, MagneticDirective],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

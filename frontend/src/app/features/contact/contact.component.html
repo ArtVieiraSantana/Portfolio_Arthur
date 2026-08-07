@@ -1,6 +1,6 @@
 <section id="contato" class="section contact">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appReveal>
       <span class="section-tag">Contato</span>
       <h2 class="section-title">Vamos <span class="gradient">Conversar?</span></h2>
       <p class="section-subtitle">Estou sempre aberto a novas oportunidades e projetos interessantes.</p>
@@ -8,7 +8,7 @@
 
     <div class="contact-content">
       <div class="contact-info">
-        <div class="contact-item glass-card">
+        <div class="contact-item glass-card" appReveal>
           <i class="fa-solid fa-envelope"></i>
           <div>
             <h3>Email</h3>
@@ -16,7 +16,7 @@
           </div>
         </div>
 
-        <div class="contact-item glass-card">
+        <div class="contact-item glass-card" appReveal [appRevealDelay]="90">
           <i class="fa-solid fa-phone"></i>
           <div>
             <h3>Telefone</h3>
@@ -24,7 +24,7 @@
           </div>
         </div>
 
-        <div class="contact-item glass-card">
+        <div class="contact-item glass-card" appReveal [appRevealDelay]="180">
           <i class="fa-solid fa-location-dot"></i>
           <div>
             <h3>Localização</h3>
@@ -32,7 +32,7 @@
           </div>
         </div>
 
-        <div class="social-icons">
+        <div class="social-icons" appReveal [appRevealDelay]="260">
           <a class="social-icon" [href]="github" target="_blank" rel="noopener" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <form class="contact-form glass-card" [formGroup]="form" (ngSubmit)="enviar()">
+      <form class="contact-form glass-card" appReveal [appRevealDelay]="100" [formGroup]="form" (ngSubmit)="enviar()">
         <div class="form-group">
           <input type="text" placeholder="Seu Nome" formControlName="name" />
           @if (f.name.invalid && f.name.touched) {
@@ -69,7 +69,7 @@
           <input type="text" formControlName="website" tabindex="-1" autocomplete="off" />
         </div>
 
-        <button type="submit" class="btn btn-primary" [disabled]="estado() === 'enviando'">
+        <button type="submit" class="btn btn-primary" appMagnetic [disabled]="estado() === 'enviando'">
           @if (estado() === 'enviando') {
             Enviando...
           } @else {

@@ -2,13 +2,15 @@ import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactService } from '../../core/services/contact.service';
+import { RevealDirective } from '../../shared/directives/reveal.directive';
+import { MagneticDirective } from '../../shared/directives/magnetic.directive';
 
 type EstadoEnvio = 'idle' | 'enviando' | 'sucesso' | 'erro';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RevealDirective, MagneticDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

@@ -229,6 +229,26 @@ button {
 }
 
 /* ===========================
+   EFEITO MAGNÉTICO (appMagnetic)
+   =========================== */
+[appMagnetic] {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [appMagnetic] {
+    transition: none;
+  }
+
+  .navbar,
+  .navbar.hidden {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ===========================
    RESPONSIVIDADE GLOBAL
    =========================== */
 @media (max-width: 768px) {
