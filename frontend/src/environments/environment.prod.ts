@@ -1,5 +1,15 @@
+declare global {
+  interface Window {
+    __PORTFOLIO_CONFIG__?: {
+      apiUrl?: string;
+    };
+  }
+}
+
 export const environment = {
   production: true,
-  // Troque pela URL do backend em produção
-  apiUrl: 'https://sua-api-em-producao.com/api'
+  // Injetado por public/runtime-config.js, gerado pelo script prebuild.
+  apiUrl:
+    window.__PORTFOLIO_CONFIG__?.apiUrl ??
+    'https://portfolio-arthur-api.onrender.com/api'
 };
