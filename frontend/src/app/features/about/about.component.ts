@@ -21,11 +21,11 @@ interface Stat {
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  // Edite livremente sua bio aqui
+  
   readonly bioParagrafo1 =
-    'Sou apaixonado por tecnologia e desenvolvimento. Busco sempre criar soluções efetivas e de qualidade, unindo boas práticas de código com atenção ao usuário final.';
+    'Sou apaixonado por tecnologia e desenvolvimento de software, com foco em Java e desenvolvimento backend. Atualmente, curso Análise e Desenvolvimento de Sistemas e atuo como estagiário de desenvolvimento Java, onde venho adquirindo experiência prática com desenvolvimento, banco de dados, APIs e ferramentas utilizadas no dia a dia de uma equipe de tecnologia.';
   readonly bioParagrafo2 =
-    'Minha jornada começou com a curiosidade em entender como as coisas funcionam, e hoje estudo Análise e Desenvolvimento de Sistemas para transformar ideias em realidade através do código.';
+    'Ao longo da minha trajetória, venho aprofundando meus conhecimentos em Java, Spring, SQL, Git e desenvolvimento de aplicações, sempre buscando escrever código organizado, aplicar boas práticas e entender não apenas como uma solução funciona, mas também como ela pode ser evoluída e gerar valor para o usuário. Meu objetivo é continuar desenvolvendo minha experiência como profissional de tecnologia e transformar conhecimento em soluções cada vez mais eficientes e de qualidade.';
 
   readonly skills: Skill[] = [
     { name: 'HTML & CSS', icon: 'fa-brands fa-html5' },

@@ -17,7 +17,7 @@ export class ProjectsComponent {
       id: 1,
       title: 'Portaria-Digital',
       description:
-        'Sistema web para gerenciamento de acesso em condomínios e empresas, com cadastro de moradores, visitantes e prestadores de serviço, além do registro de entradas e saídas de forma segura e organizada(login: sindico senha: 654321).',
+        'Sistema web para gerenciamento de acesso em condomínios e empresas, com cadastro de moradores, visitantes e prestadores de serviço, além do registro de entradas e saídas de forma segura e organizada(login: sindico senha: 654321 / admin senha: AGJMP / porteiro senha: 123456).',
       tags: ['Java', 'Spring-boot','Angular'],
       image: 'assets/Capa_Portaria_Digital.png',
       repoUrl: '#',
