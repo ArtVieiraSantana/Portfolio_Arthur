@@ -41,7 +41,7 @@ export class ProjectsComponent {
       tags: ['Backend', 'Java'],
       image: 'assets/Capa_Jogo_Java.png',
       repoUrl: 'https://github.com/stapani7/Grupo-3---Turma-A',
-      liveUrl: 'https://stapani7.github.io/Grupo-3---Turma-A/'
+      liveUrl: 'https://github.com/stapani7/Grupo-3---Turma-A'
     }
   ];
 }
