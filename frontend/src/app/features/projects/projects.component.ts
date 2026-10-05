@@ -20,7 +20,7 @@ export class ProjectsComponent {
         'Sistema web para gerenciamento de acesso em condomínios e empresas, com cadastro de moradores, visitantes e prestadores de serviço, além do registro de entradas e saídas de forma segura e organizada(login: sindico senha: 654321 / admin senha: AGJMP / porteiro senha: 123456).',
       tags: ['Java', 'Spring-boot','Angular'],
       image: 'assets/Capa_Portaria_Digital.png',
-      repoUrl: '#',
+      repoUrl: 'https://github.com/ArtVieiraSantana/Teste_Portaria_Digital.git',
       liveUrl: 'https://portaria-digital.onrender.com/'
     },
     {
@@ -37,11 +37,11 @@ export class ProjectsComponent {
       id: 3,
       title: 'Jogo Java',
       description:
-        'Um jogo RPG de texto em Java que contém áudio para suavizar a experiência do usuário. Projeto feito em grupo com foco em backend.',
+        'Um jogo RPG de texto em Java que contém áudio para suavizar a experiência do usuário. Projeto feito em grupo com foco em backend. (Por ser um projeto backend o botão Ver projeto te leva ao repositório igualmente ao botão código).',
       tags: ['Backend', 'Java'],
       image: 'assets/Capa_Jogo_Java.png',
       repoUrl: 'https://github.com/stapani7/Grupo-3---Turma-A',
-      liveUrl: '#'
+      liveUrl: 'https://stapani7.github.io/Grupo-3---Turma-A/'
     }
   ];
 }
